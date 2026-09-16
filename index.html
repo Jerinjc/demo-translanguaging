@@ -436,7 +436,12 @@
     <p class="section-kicker">CONTACT</p>
     <h2>Get in Touch</h2>
     <p>For order enquiries, workshop requests or general outreach, use the contact form.</p>
-    <form method="POST" action="/contact.php">
+    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="position:absolute;left:-9999px" aria-hidden="true">
+        <label>Leave this field blank: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+      </p>
+
       <label for="name">Name *</label>
       <input id="name" name="name" required>
 
